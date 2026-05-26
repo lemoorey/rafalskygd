@@ -258,23 +258,12 @@ function ProjectMedia({ project, num }: { project: Project; num: string }) {
           {project.slides.map((slide, idx) => (
             <CarouselItem key={idx}>
               <div className="relative w-full aspect-video bg-surface outline outline-1 -outline-offset-1 outline-ghost/5 overflow-hidden">
-                {slide.href ? (
-                  <a href={slide.href} target="_blank" rel="noopener noreferrer" className="block w-full h-full">
-                    <img
-                      src={slide.src}
-                      alt={`${project.title} screenshot ${idx + 1}`}
-                      loading="lazy"
-                      className="w-full h-full object-cover"
-                    />
-                  </a>
-                ) : (
-                  <img
-                    src={slide.src}
-                    alt={`${project.title} screenshot ${idx + 1}`}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
-                )}
+                <img
+                  src={slide.src}
+                  alt={`${project.title} screenshot ${idx + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-tr from-void/40 via-transparent to-transparent pointer-events-none" />
                 <span className="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-[0.25em] text-neon">
                   / {num}
@@ -292,14 +281,14 @@ function ProjectMedia({ project, num }: { project: Project; num: string }) {
     );
   }
   const inner = (
-    <div className="group relative w-full aspect-video bg-surface outline outline-1 -outline-offset-1 outline-ghost/5 overflow-hidden">
+    <div className="relative w-full aspect-video bg-surface outline outline-1 -outline-offset-1 outline-ghost/5 overflow-hidden">
           <img
             src={project.image}
             alt={`${project.title} key art`}
             loading="lazy"
             width={1280}
             height={720}
-            className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-tr from-void/60 via-transparent to-transparent" />
           <span className="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-[0.25em] text-neon">
@@ -307,13 +296,6 @@ function ProjectMedia({ project, num }: { project: Project; num: string }) {
           </span>
         </div>
   );
-  if (project.link) {
-    return (
-      <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
-        {inner}
-      </a>
-    );
-  }
   return inner;
 }
 
