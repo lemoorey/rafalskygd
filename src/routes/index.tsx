@@ -260,17 +260,23 @@ function ProjectMedia({ project, num }: { project: Project; num: string }) {
           {project.slides.map((slide, idx) => (
             <CarouselItem key={idx}>
               <div className="relative w-full aspect-video bg-surface outline outline-1 -outline-offset-1 outline-ghost/5 overflow-hidden">
-                <div className={`w-full h-full grid ${slide.length > 1 ? "grid-cols-2 gap-1" : "grid-cols-1"}`}>
-                  {slide.map((src, i) => (
+                {slide.href ? (
+                  <a href={slide.href} target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                     <img
-                      key={i}
-                      src={src}
+                      src={slide.src}
                       alt={`${project.title} screenshot ${idx + 1}`}
                       loading="lazy"
                       className="w-full h-full object-cover"
                     />
-                  ))}
-                </div>
+                  </a>
+                ) : (
+                  <img
+                    src={slide.src}
+                    alt={`${project.title} screenshot ${idx + 1}`}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-tr from-void/40 via-transparent to-transparent pointer-events-none" />
                 <span className="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-[0.25em] text-neon">
                   / {num}
