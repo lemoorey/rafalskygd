@@ -19,6 +19,7 @@ type Project = {
   description: string;
   tags: string[];
   link?: string;
+  linkLabel?: string;
   link2?: { label: string; href: string };
 };
 
@@ -33,7 +34,8 @@ const projects: Project[] = [
       "- Designed and implemented trap and incident mechanics, taking features from initial GDD concepts through in-game implementation, balancing, and final polishing.\n- Created level layouts focused on interactive objects, environmental storytelling, and puzzle-driven gameplay flow.\n- Developed NPC and event behavior systems to support dynamic player interactions and emergent gameplay scenarios.\n- Contributed to narrative design and story development for DLC content, including plot structure and mission progression.\n- Designed and implemented Twitch integration features, enabling viewers to directly interact with gameplay and influence the streamer’s in-game experience in real time.",
     tags: ["Game Design", "Level Design", "Game Mechanics", "Unity", "GDD", "Narrative", "Twitch"],
     link: "https://store.steampowered.com/app/356570/Party_Hard/",
-    link2: { label: "Party Hard 2 on Steam ↗", href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
+    linkLabel: "PARTY HARD ↗",
+    link2: { label: "Party Hard 2 ↗", href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
   },
   {
     title: "Fishdom",
@@ -194,7 +196,7 @@ function ProjectRow({ project, index, flipped }: { project: Project; index: numb
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.25em] text-neon border-b border-neon/40 pb-1 hover:border-neon transition-colors"
           >
-            Visit store page ↗
+            {project.linkLabel || "Visit store page ↗"}
           </a>
         )}
         {project.link2 && (
