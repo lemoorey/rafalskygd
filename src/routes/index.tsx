@@ -169,7 +169,7 @@ function Hero() {
           Designing <span className="font-bold">Systems</span> Players <span className="font-bold italic">Return</span> To.
         </h1>
         <p className="max-w-xl text-base md:text-lg text-ghost/65 leading-relaxed">
-          Anton Rafalskyi — Lead Game Designer shipping live-service mobile hits at Playrix and premium PC/console titles with TinyBuild. Systems, economy, metagame, live-ops.
+          Game Designer with hands-on experience in gameplay systems, metagame design, LiveOps events, economy balancing, FTUE, and content production for mobile and PC games.
         </p>
       </div>
 
