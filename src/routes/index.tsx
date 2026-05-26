@@ -77,7 +77,6 @@ const projects: Project[] = [
     description:
       "- Created GDD documentation for the technical implementation of in-game events and gameplay features.\n- Implemented UI elements in-game, working closely with animations, VFX, and haptic feedback systems.\n- Managed game resources, including importing and configuring assets according to design documentation and feature requirements.\n- Updated meta-game configurations and location content to support ongoing feature development.",
     tags: ["Combat System", "Balancing", "Economy", "Narrative", "GDD"],
-    link: "https://www.youtube.com/watch?v=npMlNVcuaU0",
     link2: { label: "Gameplay example ↗", href: "https://www.youtube.com/watch?v=npMlNVcuaU0" },
   },
 ];
