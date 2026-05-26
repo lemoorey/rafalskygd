@@ -12,6 +12,12 @@ import ph2 from "@/assets/proj-ph-2.jpg";
 import ph2_0 from "@/assets/proj-ph2-0.webp";
 import ph2_1 from "@/assets/proj-ph2-1.jpg";
 import ph2_3 from "@/assets/proj-ph2-3.jpg";
+import fishdom1 from "@/assets/proj-fishdom-1.jpg";
+import fishdom2 from "@/assets/proj-fishdom-2.jpg";
+import am2 from "@/assets/proj-am-2.jpg";
+import ao1 from "@/assets/proj-ao-1.png";
+import ao2 from "@/assets/proj-ao-2.png";
+import ao3 from "@/assets/proj-ao-3.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -28,7 +34,7 @@ type Project = {
   link?: string;
   linkLabel?: string;
   link2?: { label: string; href: string };
-  slides?: string[][];
+  slides?: { src: string; href?: string }[];
 };
 
 const projects: Project[] = [
@@ -44,7 +50,14 @@ const projects: Project[] = [
     link: "https://store.steampowered.com/app/356570/Party_Hard/",
     linkLabel: "PARTY HARD ↗",
     link2: { label: "Party Hard 2 ↗", href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
-    slides: [[ph0, ph2_0], [ph1], [ph2], [ph2_1], [ph2_3]],
+    slides: [
+      { src: ph0, href: "https://store.steampowered.com/app/356570/Party_Hard/" },
+      { src: ph2_0, href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
+      { src: ph1, href: "https://store.steampowered.com/app/356570/Party_Hard/" },
+      { src: ph2_1, href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
+      { src: ph2, href: "https://store.steampowered.com/app/356570/Party_Hard/" },
+      { src: ph2_3, href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
+    ],
   },
   {
     title: "Fishdom",
@@ -56,6 +69,11 @@ const projects: Project[] = [
       "- Designed and documented new locations (tanks) features, taking content from initial concept and GDD creation through implementation and final polishing.\n- Developed new fish characters, including event, premium, and collectible variants, defining their movement sets, behaviors, personalities, and unique gameplay features.\n- Balanced in-game economy systems for new locations, including soft/hard currency shops, decorations, and collectible content.\n- Analyzed player analytics data to design, develop, and manage LiveOps events end-to-end, including event configuration, balance tuning, narrative-driven GDD documentation, and UX flow improvements to increase player engagement and retention.\n- Led and coordinated a team of Content Game Designers, overseeing task distribution, feature ownership, content quality, and cross-team collaboration to ensure consistent delivery and alignment with project goals.",
     tags: ["Balancing", "Events", "Monetisation", "Team Lead", "Locations", "Live-Ops", "Metagame", "VSO"],
     link: "https://apps.apple.com/ua/app/fishdom/id664575829",
+    slides: [
+      { src: projFishdom },
+      { src: fishdom1 },
+      { src: fishdom2 },
+    ],
   },
   {
     title: "Aqua Match",
@@ -67,6 +85,10 @@ const projects: Project[] = [
       "- Designed and tuned fish physics, movement sets, and behavioral interactions to enhance gameplay feel and immersion.\n- Developed FTUE flows for meta-game systems, including item purchase scenes and fish reactions tied to player actions.\n- Created GDD documentation for new tank locations, including full upgrade paths, animations, and first-purchase presentation scenes.",
     tags: ["Metagame", "Locations", "FTUE"],
     link: "https://apps.apple.com/ua/app/aqua-match/id6502511364",
+    slides: [
+      { src: projAqua },
+      { src: am2 },
+    ],
   },
   {
     title: "Austin's Odyssey",
@@ -78,6 +100,12 @@ const projects: Project[] = [
       "- Created GDD documentation for the technical implementation of in-game events and gameplay features.\n- Implemented UI elements in-game, working closely with animations, VFX, and haptic feedback systems.\n- Managed game resources, including importing and configuring assets according to design documentation and feature requirements.\n- Updated meta-game configurations and location content to support ongoing feature development.",
     tags: ["Event Logic", "Metagame", "VFX", "Animation", "GDD", "VSO", "UI/UX"],
     link: "https://apps.apple.com/us/app/austins-odyssey/id6740872037",
+    slides: [
+      { src: projAustin },
+      { src: ao1 },
+      { src: ao2 },
+      { src: ao3 },
+    ],
   },
   {
     title: "Dino Battle",
@@ -232,17 +260,23 @@ function ProjectMedia({ project, num }: { project: Project; num: string }) {
           {project.slides.map((slide, idx) => (
             <CarouselItem key={idx}>
               <div className="relative w-full aspect-video bg-surface outline outline-1 -outline-offset-1 outline-ghost/5 overflow-hidden">
-                <div className={`w-full h-full grid ${slide.length > 1 ? "grid-cols-2 gap-1" : "grid-cols-1"}`}>
-                  {slide.map((src, i) => (
+                {slide.href ? (
+                  <a href={slide.href} target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                     <img
-                      key={i}
-                      src={src}
+                      src={slide.src}
                       alt={`${project.title} screenshot ${idx + 1}`}
                       loading="lazy"
                       className="w-full h-full object-cover"
                     />
-                  ))}
-                </div>
+                  </a>
+                ) : (
+                  <img
+                    src={slide.src}
+                    alt={`${project.title} screenshot ${idx + 1}`}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-tr from-void/40 via-transparent to-transparent pointer-events-none" />
                 <span className="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-[0.25em] text-neon">
                   / {num}
