@@ -225,6 +225,40 @@ function ProjectRow({ project, index, flipped }: { project: Project; index: numb
 }
 
 function ProjectMedia({ project, num }: { project: Project; num: string }) {
+  if (project.slides && project.slides.length > 0) {
+    return (
+      <Carousel opts={{ loop: true }} className="w-full">
+        <CarouselContent>
+          {project.slides.map((slide, idx) => (
+            <CarouselItem key={idx}>
+              <div className="relative w-full aspect-video bg-surface outline outline-1 -outline-offset-1 outline-ghost/5 overflow-hidden">
+                <div className={`w-full h-full grid ${slide.length > 1 ? "grid-cols-2 gap-1" : "grid-cols-1"}`}>
+                  {slide.map((src, i) => (
+                    <img
+                      key={i}
+                      src={src}
+                      alt={`${project.title} screenshot ${idx + 1}`}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  ))}
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-void/40 via-transparent to-transparent pointer-events-none" />
+                <span className="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-[0.25em] text-neon">
+                  / {num}
+                </span>
+                <span className="absolute bottom-4 right-4 text-[10px] font-mono uppercase tracking-[0.25em] text-ghost/70">
+                  {idx + 1} / {project.slides!.length}
+                </span>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="left-3 top-1/2 translate-y-[-50%]" />
+        <CarouselNext className="right-3 top-1/2 translate-y-[-50%]" />
+      </Carousel>
+    );
+  }
   const inner = (
     <div className="group relative w-full aspect-video bg-surface outline outline-1 -outline-offset-1 outline-ghost/5 overflow-hidden">
           <img
