@@ -76,10 +76,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Game Designer with 12 years across live-service mobile, premium PC/console, and browser games. Playrix, TinyBuild." },
       { name: "author", content: "Anton Rafalskyi" },
       { property: "og:title", content: "Anton Rafalskyi — Game Designer" },
-      { property: "og:description", content: "12 years designing systems, economies and live-ops for Fishdom, Austin's Odyssey, Party Hard." },
+      { property: "og:description", content: "Game Designer with 12 years across live-service mobile, premium PC/console, and browser games. Playrix, TinyBuild." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Anton Rafalskyi — Game Designer" },
+      { name: "twitter:description", content: "Game Designer with 12 years across live-service mobile, premium PC/console, and browser games. Playrix, TinyBuild." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0ff6fd22-5828-4e72-8179-84014869700e/id-preview-d6f96edd--5209f618-d50f-432b-a0bb-ed283104c05f.lovable.app-1779787203217.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0ff6fd22-5828-4e72-8179-84014869700e/id-preview-d6f96edd--5209f618-d50f-432b-a0bb-ed283104c05f.lovable.app-1779787203217.png" },
     ],
     links: [
       {
