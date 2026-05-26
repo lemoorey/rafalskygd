@@ -66,7 +66,7 @@ const projects: Project[] = [
     description:
       "- Created GDD documentation for the technical implementation of in-game events and gameplay features.\n- Implemented UI elements in-game, working closely with animations, VFX, and haptic feedback systems.\n- Managed game resources, including importing and configuring assets according to design documentation and feature requirements.\n- Updated meta-game configurations and location content to support ongoing feature development.",
     tags: ["Event Logic", "Metagame", "VFX", "Animation", "GDD"],
-    link: "https://play.google.com/store/apps/details?id=com.mg0.ao",
+    link: "https://apps.apple.com/us/app/austins-odyssey/id6740872037",
   },
   {
     title: "Dino Battle",
