@@ -337,9 +337,6 @@ function AboutSection() {
           <p className="text-lg text-ghost/75 leading-relaxed">
             I design and ship gameplay systems for live-service mobile games and premium PC/console titles. Experienced in end-to-end feature ownership — from concept, GDD, balancing, and implementation to LiveOps support, UX flow, and final polishing. Worked on metagame systems, economy balancing, player progression, and content pipelines for projects with large-scale live audiences.
           </p>
-          <p className="text-ghost/60 leading-relaxed">
-            Currently Lead Game Designer at Zagrava Studios (Playrix), mentoring a team of designers and driving feature delivery across Fishdom and Austin's Odyssey.
-          </p>
 
           <div className="pt-6 border-t border-ghost/10">
             <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-ghost/40 mb-4">/ Toolkit</p>
