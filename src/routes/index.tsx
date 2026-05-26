@@ -171,15 +171,9 @@ function ProjectRow({ project, index, flipped }: { project: Project; index: numb
             {project.studio} · {project.year}
           </p>
         </div>
-        <div className="text-ghost/70 leading-relaxed text-[15px] font-sans space-y-3">
-          {project.description
-            .split("\n")
-            .map((line) => line.trim())
-            .filter(Boolean)
-            .map((line, idx) => (
-              <p key={idx}>{line.replace(/^-\s*/, "")}</p>
-            ))}
-        </div>
+        <p className="text-ghost/70 leading-relaxed text-[15px] font-sans whitespace-pre-line">
+          {project.description}
+        </p>
         <div className="flex flex-wrap gap-2 pt-2">
           {project.tags.map((t) => (
             <span key={t} className="px-3 py-1 border border-ghost/10 text-[10px] uppercase tracking-[0.18em]">
