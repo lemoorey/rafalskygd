@@ -1,10 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import heroBg from "@/assets/hero-bg.jpg";
 import projFishdom from "@/assets/proj-fishdom.jpg";
 import projAustin from "@/assets/proj-austin.png";
 import projPartyHard from "@/assets/proj-partyhard.webp";
 import projAqua from "@/assets/proj-aqua.png";
 import projDino from "@/assets/proj-dino.png";
+import ph0 from "@/assets/proj-ph-0.jpg";
+import ph1 from "@/assets/proj-ph-1.jpg";
+import ph2 from "@/assets/proj-ph-2.jpg";
+import ph2_0 from "@/assets/proj-ph2-0.webp";
+import ph2_1 from "@/assets/proj-ph2-1.jpg";
+import ph2_3 from "@/assets/proj-ph2-3.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -21,6 +28,7 @@ type Project = {
   link?: string;
   linkLabel?: string;
   link2?: { label: string; href: string };
+  slides?: string[][];
 };
 
 const projects: Project[] = [
@@ -36,6 +44,7 @@ const projects: Project[] = [
     link: "https://store.steampowered.com/app/356570/Party_Hard/",
     linkLabel: "PARTY HARD ↗",
     link2: { label: "Party Hard 2 ↗", href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
+    slides: [[ph0, ph2_0], [ph1], [ph2], [ph2_1], [ph2_3]],
   },
   {
     title: "Fishdom",
