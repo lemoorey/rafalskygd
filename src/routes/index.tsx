@@ -2,8 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-bg.jpg";
 import projFishdom from "@/assets/proj-fishdom.jpg";
 import projAustin from "@/assets/proj-austin.jpg";
-import projPartyHard from "@/assets/proj-partyhard.jpg";
-import projAqua from "@/assets/proj-aqua.jpg";
+import projPartyHard from "@/assets/proj-partyhard.webp";
+import projAqua from "@/assets/proj-aqua.png";
+import projDino from "@/assets/proj-dino.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -17,6 +18,7 @@ type Project = {
   image: string;
   description: string;
   tags: string[];
+  link?: string;
 };
 
 const projects: Project[] = [
@@ -28,7 +30,8 @@ const projects: Project[] = [
     image: projPartyHard,
     description:
       "- Designed and implemented trap and incident mechanics, taking features from initial GDD concepts through in-game implementation, balancing, and final polishing.\n- Created level layouts focused on interactive objects, environmental storytelling, and puzzle-driven gameplay flow.\n- Developed NPC and event behavior systems to support dynamic player interactions and emergent gameplay scenarios.\n- Contributed to narrative design and story development for DLC content, including plot structure and mission progression.\n- Designed and implemented Twitch integration features, enabling viewers to directly interact with gameplay and influence the streamer’s in-game experience in real time.",
-    tags: ["Game Design", "Unity", "GDD", "Narrative"],
+    tags: ["Game Design", "Level Design", "Game Mechanics", "Unity", "GDD", "Narrative", "Twitch"],
+    link: "https://store.steampowered.com/app/356570/Party_Hard/",
   },
   {
     title: "Fishdom",
@@ -38,7 +41,8 @@ const projects: Project[] = [
     image: projFishdom,
     description:
       "- Designed and documented new locations (tanks) features, taking content from initial concept and GDD creation through implementation and final polishing.\n- Developed new fish characters, including event, premium, and collectible variants, defining their movement sets, behaviors, personalities, and unique gameplay features.\n- Balanced in-game economy systems for new locations, including soft/hard currency shops, decorations, and collectible content.\n- Analyzed player analytics data to design, develop, and manage LiveOps events end-to-end, including event configuration, balance tuning, narrative-driven GDD documentation, and UX flow improvements to increase player engagement and retention.\n- Led and coordinated a team of Content Game Designers, overseeing task distribution, feature ownership, content quality, and cross-team collaboration to ensure consistent delivery and alignment with project goals.",
-    tags: ["Balancing", "Events", "Monetisation"],
+    tags: ["Balancing", "Events", "Monetisation", "Team Lead", "Locations", "Live-Ops"],
+    link: "https://apps.apple.com/ua/app/fishdom/id664575829",
   },
   {
     title: "Aqua Match",
@@ -48,7 +52,8 @@ const projects: Project[] = [
     image: projAqua,
     description:
       "- Designed and tuned fish physics, movement sets, and behavioral interactions to enhance gameplay feel and immersion.\n- Developed FTUE flows for meta-game systems, including item purchase scenes and fish reactions tied to player actions.\n- Created GDD documentation for new tank locations, including full upgrade paths, animations, and first-purchase presentation scenes.",
-    tags: ["Live-Ops", "Metagame", "Locations", "FTUE"],
+    tags: ["Metagame", "Locations", "FTUE"],
+    link: "https://apps.apple.com/ua/app/aqua-match/id6502511364",
   },
   {
     title: "Austin's Odyssey",
@@ -58,17 +63,18 @@ const projects: Project[] = [
     image: projAustin,
     description:
       "- Created GDD documentation for the technical implementation of in-game events and gameplay features.\n- Implemented UI elements in-game, working closely with animations, VFX, and haptic feedback systems.\n- Managed game resources, including importing and configuring assets according to design documentation and feature requirements.\n- Updated meta-game configurations and location content to support ongoing feature development.",
-    tags: ["Event Logic", "Metagame", "VFX", "Animation"],
+    tags: ["Event Logic", "Metagame", "VFX", "Animation", "GDD"],
+    link: "https://play.google.com/store/apps/details?id=com.mg0.ao",
   },
   {
     title: "Dino Battle",
     role: "Game Designer",
     studio: "",
     year: "",
-    image: projAustin,
+    image: projDino,
     description:
       "- Created GDD documentation for the technical implementation of in-game events and gameplay features.\n- Implemented UI elements in-game, working closely with animations, VFX, and haptic feedback systems.\n- Managed game resources, including importing and configuring assets according to design documentation and feature requirements.\n- Updated meta-game configurations and location content to support ongoing feature development.",
-    tags: ["Combat System", "Balancing", "Economy", "Narrative"],
+    tags: ["Combat System", "Balancing", "Economy", "Narrative", "GDD"],
   },
 ];
 
