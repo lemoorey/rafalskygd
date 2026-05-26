@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-bg.jpg";
 import projFishdom from "@/assets/proj-fishdom.jpg";
-import projAustin from "@/assets/proj-austin.jpg";
+import projAustin from "@/assets/proj-austin.png";
 import projPartyHard from "@/assets/proj-partyhard.webp";
 import projAqua from "@/assets/proj-aqua.png";
 import projDino from "@/assets/proj-dino.png";
@@ -43,7 +43,7 @@ const projects: Project[] = [
     image: projFishdom,
     description:
       "- Designed and documented new locations (tanks) features, taking content from initial concept and GDD creation through implementation and final polishing.\n- Developed new fish characters, including event, premium, and collectible variants, defining their movement sets, behaviors, personalities, and unique gameplay features.\n- Balanced in-game economy systems for new locations, including soft/hard currency shops, decorations, and collectible content.\n- Analyzed player analytics data to design, develop, and manage LiveOps events end-to-end, including event configuration, balance tuning, narrative-driven GDD documentation, and UX flow improvements to increase player engagement and retention.\n- Led and coordinated a team of Content Game Designers, overseeing task distribution, feature ownership, content quality, and cross-team collaboration to ensure consistent delivery and alignment with project goals.",
-    tags: ["Balancing", "Events", "Monetisation", "Team Lead", "Locations", "Live-Ops"],
+    tags: ["Balancing", "Events", "Monetisation", "Team Lead", "Locations", "Live-Ops", "Metagame", "VSO"],
     link: "https://apps.apple.com/ua/app/fishdom/id664575829",
   },
   {
@@ -65,7 +65,7 @@ const projects: Project[] = [
     image: projAustin,
     description:
       "- Created GDD documentation for the technical implementation of in-game events and gameplay features.\n- Implemented UI elements in-game, working closely with animations, VFX, and haptic feedback systems.\n- Managed game resources, including importing and configuring assets according to design documentation and feature requirements.\n- Updated meta-game configurations and location content to support ongoing feature development.",
-    tags: ["Event Logic", "Metagame", "VFX", "Animation", "GDD"],
+    tags: ["Event Logic", "Metagame", "VFX", "Animation", "GDD", "VSO", "UI/UX"],
     link: "https://apps.apple.com/us/app/austins-odyssey/id6740872037",
   },
   {
@@ -77,6 +77,8 @@ const projects: Project[] = [
     description:
       "- Created GDD documentation for the technical implementation of in-game events and gameplay features.\n- Implemented UI elements in-game, working closely with animations, VFX, and haptic feedback systems.\n- Managed game resources, including importing and configuring assets according to design documentation and feature requirements.\n- Updated meta-game configurations and location content to support ongoing feature development.",
     tags: ["Combat System", "Balancing", "Economy", "Narrative", "GDD"],
+    link: "https://www.youtube.com/watch?v=npMlNVcuaU0",
+    link2: { label: "Gameplay example ↗", href: "https://www.youtube.com/watch?v=npMlNVcuaU0" },
   },
 ];
 
