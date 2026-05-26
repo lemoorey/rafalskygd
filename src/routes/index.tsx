@@ -51,8 +51,8 @@ const projects: Project[] = [
     linkLabel: "PARTY HARD ↗",
     link2: { label: "Party Hard 2 ↗", href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
     slides: [
-      { src: ph0, href: "https://store.steampowered.com/app/356570/Party_Hard/" },
       { src: ph2_0, href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
+      { src: ph0, href: "https://store.steampowered.com/app/356570/Party_Hard/" },
       { src: ph1, href: "https://store.steampowered.com/app/356570/Party_Hard/" },
       { src: ph2_1, href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
       { src: ph2, href: "https://store.steampowered.com/app/356570/Party_Hard/" },
@@ -70,9 +70,9 @@ const projects: Project[] = [
     tags: ["Balancing", "Events", "Monetisation", "Team Lead", "Locations", "Live-Ops", "Metagame", "VSO"],
     link: "https://apps.apple.com/ua/app/fishdom/id664575829",
     slides: [
-      { src: projFishdom },
-      { src: fishdom1 },
-      { src: fishdom2 },
+      { src: projFishdom, href: "https://apps.apple.com/ua/app/fishdom/id664575829" },
+      { src: fishdom1, href: "https://apps.apple.com/ua/app/fishdom/id664575829" },
+      { src: fishdom2, href: "https://apps.apple.com/ua/app/fishdom/id664575829" },
     ],
   },
   {
@@ -86,8 +86,8 @@ const projects: Project[] = [
     tags: ["Metagame", "Locations", "FTUE"],
     link: "https://apps.apple.com/ua/app/aqua-match/id6502511364",
     slides: [
-      { src: projAqua },
-      { src: am2 },
+      { src: projAqua, href: "https://apps.apple.com/ua/app/aqua-match/id6502511364" },
+      { src: am2, href: "https://apps.apple.com/ua/app/aqua-match/id6502511364" },
     ],
   },
   {
@@ -101,10 +101,10 @@ const projects: Project[] = [
     tags: ["Event Logic", "Metagame", "VFX", "Animation", "GDD", "VSO", "UI/UX"],
     link: "https://apps.apple.com/us/app/austins-odyssey/id6740872037",
     slides: [
-      { src: projAustin },
-      { src: ao1 },
-      { src: ao2 },
-      { src: ao3 },
+      { src: ao1, href: "https://apps.apple.com/us/app/austins-odyssey/id6740872037" },
+      { src: projAustin, href: "https://apps.apple.com/us/app/austins-odyssey/id6740872037" },
+      { src: ao2, href: "https://apps.apple.com/us/app/austins-odyssey/id6740872037" },
+      { src: ao3, href: "https://apps.apple.com/us/app/austins-odyssey/id6740872037" },
     ],
   },
   {
