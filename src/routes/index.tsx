@@ -102,7 +102,6 @@ const projects: Project[] = [
     link: "https://apps.apple.com/us/app/austins-odyssey/id6740872037",
     slides: [
       { src: ao1, href: "https://apps.apple.com/us/app/austins-odyssey/id6740872037" },
-      { src: projAustin, href: "https://apps.apple.com/us/app/austins-odyssey/id6740872037" },
       { src: ao2, href: "https://apps.apple.com/us/app/austins-odyssey/id6740872037" },
       { src: ao3, href: "https://apps.apple.com/us/app/austins-odyssey/id6740872037" },
     ],
