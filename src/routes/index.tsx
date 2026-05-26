@@ -52,7 +52,6 @@ const projects: Project[] = [
     link2: { label: "Party Hard 2 ↗", href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
     slides: [
       { src: ph2_0, href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
-      { src: ph0, href: "https://store.steampowered.com/app/356570/Party_Hard/" },
       { src: ph1, href: "https://store.steampowered.com/app/356570/Party_Hard/" },
       { src: ph2_1, href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
       { src: ph2, href: "https://store.steampowered.com/app/356570/Party_Hard/" },
