@@ -1,10 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import heroBg from "@/assets/hero-bg.jpg";
 import projFishdom from "@/assets/proj-fishdom.jpg";
 import projAustin from "@/assets/proj-austin.png";
 import projPartyHard from "@/assets/proj-partyhard.webp";
 import projAqua from "@/assets/proj-aqua.png";
 import projDino from "@/assets/proj-dino.png";
+import ph0 from "@/assets/proj-ph-0.jpg";
+import ph1 from "@/assets/proj-ph-1.jpg";
+import ph2 from "@/assets/proj-ph-2.jpg";
+import ph2_0 from "@/assets/proj-ph2-0.webp";
+import ph2_1 from "@/assets/proj-ph2-1.jpg";
+import ph2_3 from "@/assets/proj-ph2-3.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -21,6 +28,7 @@ type Project = {
   link?: string;
   linkLabel?: string;
   link2?: { label: string; href: string };
+  slides?: string[][];
 };
 
 const projects: Project[] = [
@@ -36,6 +44,7 @@ const projects: Project[] = [
     link: "https://store.steampowered.com/app/356570/Party_Hard/",
     linkLabel: "PARTY HARD ↗",
     link2: { label: "Party Hard 2 ↗", href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
+    slides: [[ph0, ph2_0], [ph1], [ph2], [ph2_1], [ph2_3]],
   },
   {
     title: "Fishdom",
@@ -216,6 +225,40 @@ function ProjectRow({ project, index, flipped }: { project: Project; index: numb
 }
 
 function ProjectMedia({ project, num }: { project: Project; num: string }) {
+  if (project.slides && project.slides.length > 0) {
+    return (
+      <Carousel opts={{ loop: true }} className="w-full">
+        <CarouselContent>
+          {project.slides.map((slide, idx) => (
+            <CarouselItem key={idx}>
+              <div className="relative w-full aspect-video bg-surface outline outline-1 -outline-offset-1 outline-ghost/5 overflow-hidden">
+                <div className={`w-full h-full grid ${slide.length > 1 ? "grid-cols-2 gap-1" : "grid-cols-1"}`}>
+                  {slide.map((src, i) => (
+                    <img
+                      key={i}
+                      src={src}
+                      alt={`${project.title} screenshot ${idx + 1}`}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  ))}
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-void/40 via-transparent to-transparent pointer-events-none" />
+                <span className="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-[0.25em] text-neon">
+                  / {num}
+                </span>
+                <span className="absolute bottom-4 right-4 text-[10px] font-mono uppercase tracking-[0.25em] text-ghost/70">
+                  {idx + 1} / {project.slides!.length}
+                </span>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="left-3 top-1/2 translate-y-[-50%]" />
+        <CarouselNext className="right-3 top-1/2 translate-y-[-50%]" />
+      </Carousel>
+    );
+  }
   const inner = (
     <div className="group relative w-full aspect-video bg-surface outline outline-1 -outline-offset-1 outline-ghost/5 overflow-hidden">
           <img
