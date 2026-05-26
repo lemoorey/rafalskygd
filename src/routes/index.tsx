@@ -166,7 +166,7 @@ function Hero() {
           [ Game Designer · 12 Years · Lviv / Rivne, UA ]
         </p>
         <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-light leading-[0.85] uppercase tracking-tighter mb-8 md:mb-10">
-          Designing <span className="font-bold">Systems</span> Players <span className="font-bold italic">Return</span> To.
+          Building <span className="font-bold">Engaging</span> Gameplay <span className="font-bold italic">Systems</span>.
         </h1>
         <p className="max-w-xl text-base md:text-lg text-ghost/65 leading-relaxed">
           Game Designer with hands-on experience in gameplay systems, metagame design, LiveOps events, economy balancing, FTUE, and content production for mobile and PC games.
