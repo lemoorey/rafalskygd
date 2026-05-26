@@ -168,7 +168,7 @@ function ProjectRow({ project, index, flipped }: { project: Project; index: numb
             {project.title}
           </h3>
           <p className="text-[11px] font-mono uppercase tracking-[0.2em] text-ghost/40">
-            {project.studio} · {project.year}
+            {project.studio}
           </p>
         </div>
         <p className="text-ghost/70 leading-relaxed text-[15px] font-sans whitespace-pre-line">
