@@ -119,9 +119,9 @@ function Hero() {
           alt=""
           width={1920}
           height={1080}
-          className="w-full h-full object-cover opacity-60"
+          className="w-full h-full object-cover opacity-90"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-void via-void/70 to-void/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-void via-void/85 to-void/20" />
       </div>
 
       <div className="relative z-10 max-w-5xl">
