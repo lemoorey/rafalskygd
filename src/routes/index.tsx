@@ -121,8 +121,8 @@ function Hero() {
           height={1080}
           className="w-full h-full object-cover opacity-90"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-void via-void/85 to-void/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-void via-void/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-void via-void/90 to-void/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_70%_at_15%_85%,_var(--tw-gradient-stops))] from-void via-void/90 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-5xl">
