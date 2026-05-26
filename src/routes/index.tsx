@@ -288,8 +288,8 @@ function ProjectMedia({ project, num }: { project: Project; num: string }) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-3 top-1/2 translate-y-[-50%]" />
-        <CarouselNext className="right-3 top-1/2 translate-y-[-50%]" />
+        <CarouselPrevious className="left-3 top-1/2 translate-y-[-50%] bg-transparent border-white text-white hover:bg-white hover:text-void" />
+        <CarouselNext className="right-3 top-1/2 translate-y-[-50%] bg-transparent border-white text-white hover:bg-white hover:text-void" />
       </Carousel>
     );
   }
