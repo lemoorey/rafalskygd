@@ -72,18 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Anton Rafalskyi — Game Designer" },
+      { title: "Anton Rafalskyi — Game Designer Portfolio" },
       { name: "description", content: "Game Designer with 12 years across live-service mobile, premium PC/console, and browser games. Playrix, TinyBuild." },
       { name: "author", content: "Anton Rafalskyi" },
-      { property: "og:title", content: "Anton Rafalskyi — Game Designer" },
+      { property: "og:title", content: "Anton Rafalskyi — Game Designer Portfolio" },
       { property: "og:description", content: "Game Designer with 12 years across live-service mobile, premium PC/console, and browser games. Playrix, TinyBuild." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Anton Rafalskyi — Game Designer" },
+      { name: "twitter:title", content: "Anton Rafalskyi — Game Designer Portfolio" },
       { name: "twitter:description", content: "Game Designer with 12 years across live-service mobile, premium PC/console, and browser games. Playrix, TinyBuild." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0ff6fd22-5828-4e72-8179-84014869700e/id-preview-d6f96edd--5209f618-d50f-432b-a0bb-ed283104c05f.lovable.app-1779787203217.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0ff6fd22-5828-4e72-8179-84014869700e/id-preview-d6f96edd--5209f618-d50f-432b-a0bb-ed283104c05f.lovable.app-1779787203217.png" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/0d9e21be-d89f-4a6f-a359-491eadbf622e" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/0d9e21be-d89f-4a6f-a359-491eadbf622e" },
     ],
     links: [
       {
