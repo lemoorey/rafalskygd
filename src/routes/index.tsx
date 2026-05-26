@@ -2,8 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-bg.jpg";
 import projFishdom from "@/assets/proj-fishdom.jpg";
 import projAustin from "@/assets/proj-austin.jpg";
-import projPartyHard from "@/assets/proj-partyhard.jpg";
-import projAqua from "@/assets/proj-aqua.jpg";
+import projPartyHard from "@/assets/proj-partyhard.webp";
+import projAqua from "@/assets/proj-aqua.png";
+import projDino from "@/assets/proj-dino.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -17,6 +18,8 @@ type Project = {
   image: string;
   description: string;
   tags: string[];
+  link?: string;
+  link2?: { label: string; href: string };
 };
 
 const projects: Project[] = [
@@ -28,7 +31,9 @@ const projects: Project[] = [
     image: projPartyHard,
     description:
       "- Designed and implemented trap and incident mechanics, taking features from initial GDD concepts through in-game implementation, balancing, and final polishing.\n- Created level layouts focused on interactive objects, environmental storytelling, and puzzle-driven gameplay flow.\n- Developed NPC and event behavior systems to support dynamic player interactions and emergent gameplay scenarios.\n- Contributed to narrative design and story development for DLC content, including plot structure and mission progression.\n- Designed and implemented Twitch integration features, enabling viewers to directly interact with gameplay and influence the streamer’s in-game experience in real time.",
-    tags: ["Game Design", "Unity", "GDD", "Narrative"],
+    tags: ["Game Design", "Level Design", "Game Mechanics", "Unity", "GDD", "Narrative", "Twitch"],
+    link: "https://store.steampowered.com/app/356570/Party_Hard/",
+    link2: { label: "Party Hard 2 on Steam ↗", href: "https://store.steampowered.com/app/572430/Party_Hard_2/" },
   },
   {
     title: "Fishdom",
@@ -38,7 +43,8 @@ const projects: Project[] = [
     image: projFishdom,
     description:
       "- Designed and documented new locations (tanks) features, taking content from initial concept and GDD creation through implementation and final polishing.\n- Developed new fish characters, including event, premium, and collectible variants, defining their movement sets, behaviors, personalities, and unique gameplay features.\n- Balanced in-game economy systems for new locations, including soft/hard currency shops, decorations, and collectible content.\n- Analyzed player analytics data to design, develop, and manage LiveOps events end-to-end, including event configuration, balance tuning, narrative-driven GDD documentation, and UX flow improvements to increase player engagement and retention.\n- Led and coordinated a team of Content Game Designers, overseeing task distribution, feature ownership, content quality, and cross-team collaboration to ensure consistent delivery and alignment with project goals.",
-    tags: ["Balancing", "Events", "Monetisation"],
+    tags: ["Balancing", "Events", "Monetisation", "Team Lead", "Locations", "Live-Ops"],
+    link: "https://apps.apple.com/ua/app/fishdom/id664575829",
   },
   {
     title: "Aqua Match",
@@ -48,7 +54,8 @@ const projects: Project[] = [
     image: projAqua,
     description:
       "- Designed and tuned fish physics, movement sets, and behavioral interactions to enhance gameplay feel and immersion.\n- Developed FTUE flows for meta-game systems, including item purchase scenes and fish reactions tied to player actions.\n- Created GDD documentation for new tank locations, including full upgrade paths, animations, and first-purchase presentation scenes.",
-    tags: ["Live-Ops", "Metagame", "Locations", "FTUE"],
+    tags: ["Metagame", "Locations", "FTUE"],
+    link: "https://apps.apple.com/ua/app/aqua-match/id6502511364",
   },
   {
     title: "Austin's Odyssey",
@@ -58,17 +65,18 @@ const projects: Project[] = [
     image: projAustin,
     description:
       "- Created GDD documentation for the technical implementation of in-game events and gameplay features.\n- Implemented UI elements in-game, working closely with animations, VFX, and haptic feedback systems.\n- Managed game resources, including importing and configuring assets according to design documentation and feature requirements.\n- Updated meta-game configurations and location content to support ongoing feature development.",
-    tags: ["Event Logic", "Metagame", "VFX", "Animation"],
+    tags: ["Event Logic", "Metagame", "VFX", "Animation", "GDD"],
+    link: "https://play.google.com/store/apps/details?id=com.mg0.ao",
   },
   {
     title: "Dino Battle",
     role: "Game Designer",
     studio: "",
     year: "",
-    image: projAustin,
+    image: projDino,
     description:
       "- Created GDD documentation for the technical implementation of in-game events and gameplay features.\n- Implemented UI elements in-game, working closely with animations, VFX, and haptic feedback systems.\n- Managed game resources, including importing and configuring assets according to design documentation and feature requirements.\n- Updated meta-game configurations and location content to support ongoing feature development.",
-    tags: ["Combat System", "Balancing", "Economy", "Narrative"],
+    tags: ["Combat System", "Balancing", "Economy", "Narrative", "GDD"],
   },
 ];
 
@@ -154,20 +162,7 @@ function ProjectRow({ project, index, flipped }: { project: Project; index: numb
   return (
     <article className="grid md:grid-cols-12 gap-8 md:gap-12 items-start">
       <div className={`md:col-span-8 ${flipped ? "md:order-2" : ""}`}>
-        <div className="group relative w-full aspect-video bg-surface outline outline-1 -outline-offset-1 outline-ghost/5 overflow-hidden">
-          <img
-            src={project.image}
-            alt={`${project.title} key art`}
-            loading="lazy"
-            width={1280}
-            height={720}
-            className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-tr from-void/60 via-transparent to-transparent" />
-          <span className="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-[0.25em] text-neon">
-            / {num}
-          </span>
-        </div>
+        <ProjectMedia project={project} num={num} />
       </div>
       <div className={`md:col-span-4 space-y-6 ${flipped ? "md:order-1" : ""}`}>
         <div className="space-y-2">
@@ -191,9 +186,56 @@ function ProjectRow({ project, index, flipped }: { project: Project; index: numb
             </span>
           ))}
         </div>
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.25em] text-neon border-b border-neon/40 pb-1 hover:border-neon transition-colors"
+          >
+            Visit store page ↗
+          </a>
+        )}
+        {project.link2 && (
+          <a
+            href={project.link2.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.25em] text-neon border-b border-neon/40 pb-1 hover:border-neon transition-colors"
+          >
+            {project.link2.label}
+          </a>
+        )}
       </div>
     </article>
   );
+}
+
+function ProjectMedia({ project, num }: { project: Project; num: string }) {
+  const inner = (
+    <div className="group relative w-full aspect-video bg-surface outline outline-1 -outline-offset-1 outline-ghost/5 overflow-hidden">
+          <img
+            src={project.image}
+            alt={`${project.title} key art`}
+            loading="lazy"
+            width={1280}
+            height={720}
+            className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-tr from-void/60 via-transparent to-transparent" />
+          <span className="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-[0.25em] text-neon">
+            / {num}
+          </span>
+        </div>
+  );
+  if (project.link) {
+    return (
+      <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+        {inner}
+      </a>
+    );
+  }
+  return inner;
 }
 
 function AboutSection() {
