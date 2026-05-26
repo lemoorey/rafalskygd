@@ -401,7 +401,7 @@ function Footer() {
           </div>
           <div>
             <p className="text-ghost/30 mb-2">/ Elsewhere</p>
-            <a href="#" className="text-ghost/70 hover:text-neon transition-colors normal-case tracking-normal text-sm">LinkedIn ↗</a>
+            <a href="https://www.linkedin.com/in/anton-rafalskyi-ba9b81a6/" target="_blank" rel="noopener noreferrer" className="text-ghost/70 hover:text-neon transition-colors normal-case tracking-normal text-sm">LinkedIn ↗</a>
           </div>
         </div>
 
