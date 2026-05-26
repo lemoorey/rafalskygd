@@ -135,7 +135,7 @@ function Nav() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-6 md:px-10 py-6 flex justify-between items-center mix-blend-difference">
       <a href="#top" className="font-display font-bold tracking-tighter text-xl md:text-2xl uppercase">
-        Rafalskyi<span className="text-neon">.</span>
+        Rafalskyi <span className="text-neon">Anton</span>
       </a>
       <div className="hidden md:flex gap-8 text-[11px] font-medium uppercase tracking-[0.2em]">
         <a href="#work" className="hover:text-neon transition-colors">Work</a>
