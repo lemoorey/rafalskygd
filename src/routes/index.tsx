@@ -27,7 +27,7 @@ const projects: Project[] = [
     year: "2014 — 2019",
     image: projPartyHard,
     description:
-      "Designed and implemented gameplay mechanics, levels and NPC behaviour across Steam, PlayStation and Xbox releases. A stealth-action cult classic.",
+      "- Designed and implemented trap and incident mechanics, taking features from initial GDD concepts through in-game implementation, balancing, and final polishing.\n- Created level layouts focused on interactive objects, environmental storytelling, and puzzle-driven gameplay flow.\n- Developed NPC and event behavior systems to support dynamic player interactions and emergent gameplay scenarios.\n- Contributed to narrative design and story development for DLC content, including plot structure and mission progression.",
     tags: ["Level Design", "NPC AI", "Steam · PS · Xbox"],
   },
   {
@@ -171,7 +171,7 @@ function ProjectRow({ project, index, flipped }: { project: Project; index: numb
             {project.studio} · {project.year}
           </p>
         </div>
-        <p className="text-ghost/70 leading-relaxed text-[15px]">
+        <p className="text-ghost/70 leading-relaxed text-[15px] font-sans border border-none whitespace-pre-line">
           {project.description}
         </p>
         <div className="flex flex-wrap gap-2 pt-2">
