@@ -3,6 +3,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 import projFishdom from "@/assets/proj-fishdom.jpg";
 import projAustin from "@/assets/proj-austin.jpg";
 import projPartyHard from "@/assets/proj-partyhard.jpg";
+import projAqua from "@/assets/proj-aqua.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -20,14 +21,14 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Austin's Odyssey",
-    role: "Technical Designer",
-    studio: "Playrix — Soft Launch",
-    year: "2024",
-    image: projAustin,
+    title: "Party Hard 1 & 2",
+    role: "Game Designer",
+    studio: "Pinokl Games · published by TinyBuild",
+    year: "2014 — 2019",
+    image: projPartyHard,
     description:
-      "Owned full UI layout and integration on a new Playrix title — atlas creation, asset wiring, audio and VFX setup. Shipped end-to-end on the VSO engine.",
-    tags: ["VSO Engine", "UI Integration", "VFX & Audio"],
+      "Designed and implemented gameplay mechanics, levels and NPC behaviour across Steam, PlayStation and Xbox releases. A stealth-action cult classic.",
+    tags: ["Level Design", "NPC AI", "Steam · PS · Xbox"],
   },
   {
     title: "Fishdom",
@@ -40,14 +41,24 @@ const projects: Project[] = [
     tags: ["Live-Ops", "Economy", "Metagame", "Team Lead"],
   },
   {
-    title: "Party Hard 1 & 2",
-    role: "Game Designer",
-    studio: "Pinokl Games · published by TinyBuild",
-    year: "2014 — 2019",
-    image: projPartyHard,
+    title: "Aqua Match",
+    role: "Lead Game Designer",
+    studio: "Playrix — Live Service",
+    year: "2019 — Present",
+    image: projAqua,
     description:
-      "Designed and implemented gameplay mechanics, levels and NPC behaviour across Steam, PlayStation and Xbox releases. A stealth-action cult classic.",
-    tags: ["Level Design", "NPC AI", "Steam · PS · Xbox"],
+      "Designed and shipped recurring live-ops events and continuous metagame updates. Owned GDD, balance tuning, and feature delivery from concept to launch for one of the world's top match-3 titles.",
+    tags: ["Live-Ops", "Economy", "Metagame", "Team Lead"],
+  },
+  {
+    title: "Austin's Odyssey",
+    role: "Technical Designer",
+    studio: "Playrix — Soft Launch",
+    year: "2024",
+    image: projAustin,
+    description:
+      "Owned full UI layout and integration on a new Playrix title — atlas creation, asset wiring, audio and VFX setup. Shipped end-to-end on the VSO engine.",
+    tags: ["VSO Engine", "UI Integration", "VFX & Audio"],
   },
 ];
 
