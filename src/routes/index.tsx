@@ -240,7 +240,7 @@ function ProjectRow({ project, index, flipped }: { project: Project; index: numb
             href={project.link2.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-4 inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.25em] text-neon border-b border-neon/40 pb-1 hover:border-neon transition-colors"
+            className={`${project.link ? "ml-4" : ""} inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.25em] text-neon border-b border-neon/40 pb-1 hover:border-neon transition-colors`}
           >
             {project.link2.label}
           </a>
