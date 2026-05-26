@@ -2,10 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import heroBg from "@/assets/hero-bg.jpg";
 import projFishdom from "@/assets/proj-fishdom.jpg";
-import projAustin from "@/assets/proj-austin.png";
+import projAustin from "@/assets/proj-austin.jpg";
 import projPartyHard from "@/assets/proj-partyhard.webp";
-import projAqua from "@/assets/proj-aqua.png";
-import projDino from "@/assets/proj-dino.png";
+import projAqua from "@/assets/proj-aqua.jpg";
+import projDino from "@/assets/proj-dino.jpg";
 import ph0 from "@/assets/proj-ph-0.jpg";
 import ph1 from "@/assets/proj-ph-1.jpg";
 import ph2 from "@/assets/proj-ph-2.jpg";
@@ -15,8 +15,8 @@ import ph2_3 from "@/assets/proj-ph2-3.jpg";
 import fishdom1 from "@/assets/proj-fishdom-1.jpg";
 import fishdom2 from "@/assets/proj-fishdom-2.jpg";
 import am2 from "@/assets/proj-am-2.jpg";
-import ao1 from "@/assets/proj-ao-1.png";
-import ao2 from "@/assets/proj-ao-2.png";
+import ao1 from "@/assets/proj-ao-1.jpg";
+import ao2 from "@/assets/proj-ao-2.jpg";
 import ao3 from "@/assets/proj-ao-3.jpg";
 
 export const Route = createFileRoute("/")({
