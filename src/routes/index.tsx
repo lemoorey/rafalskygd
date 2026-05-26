@@ -27,37 +27,37 @@ const projects: Project[] = [
     year: "2014 — 2019",
     image: projPartyHard,
     description:
-      "- Designed and implemented trap and incident mechanics, taking features from initial GDD concepts through in-game implementation, balancing, and final polishing.\n- Created level layouts focused on interactive objects, environmental storytelling, and puzzle-driven gameplay flow.\n- Developed NPC and event behavior systems to support dynamic player interactions and emergent gameplay scenarios.\n- Contributed to narrative design and story development for DLC content, including plot structure and mission progression.",
+      "- Designed and implemented trap and incident mechanics, taking features from initial GDD concepts through in-game implementation, balancing, and final polishing.\n- Created level layouts focused on interactive objects, environmental storytelling, and puzzle-driven gameplay flow.\n- Developed NPC and event behavior systems to support dynamic player interactions and emergent gameplay scenarios.\n- Contributed to narrative design and story development for DLC content, including plot structure and mission progression.\n- Designed and implemented Twitch integration features, enabling viewers to directly interact with gameplay and influence the streamer’s in-game experience in real time.",
     tags: ["Level Design", "NPC AI", "Steam · PS · Xbox"],
   },
   {
     title: "Fishdom",
-    role: "Lead Game Designer",
-    studio: "Playrix — Live Service",
+    role: "Game Designer",
+    studio: "PLAYRIX — LIVE SERVICE ",
     year: "2019 — Present",
     image: projFishdom,
     description:
-      "Designed and shipped recurring live-ops events and continuous metagame updates. Owned GDD, balance tuning, and feature delivery from concept to launch for one of the world's top match-3 titles.",
+      "- Designed and documented new locations (tanks) features, taking content from initial concept and GDD creation through implementation and final polishing.\n- Developed new fish characters, including event, premium, and collectible variants, defining their movement sets, behaviors, personalities, and unique gameplay features.\n- Balanced in-game economy systems for new locations, including soft/hard currency shops, decorations, and collectible content.\n- Analyzed player analytics data to design, develop, and manage LiveOps events end-to-end, including event configuration, balance tuning, narrative-driven GDD documentation, and UX flow improvements to increase player engagement and retention.\n- Led and coordinated a team of Content Game Designers, overseeing task distribution, feature ownership, content quality, and cross-team collaboration to ensure consistent delivery and alignment with project goals.",
     tags: ["Live-Ops", "Economy", "Metagame", "Team Lead"],
   },
   {
     title: "Aqua Match",
-    role: "Lead Game Designer",
-    studio: "Playrix — Live Service",
+    role: "Game Designer",
+    studio: "Playrix — Live Service ",
     year: "2019 — Present",
     image: projAqua,
     description:
-      "Designed and shipped recurring live-ops events and continuous metagame updates. Owned GDD, balance tuning, and feature delivery from concept to launch for one of the world's top match-3 titles.",
+      "- Designed and tuned fish physics, movement sets, and behavioral interactions to enhance gameplay feel and immersion.\n- Developed FTUE flows for meta-game systems, including item purchase scenes and fish reactions tied to player actions.\n- Created GDD documentation for new tank locations, including full upgrade paths, animations, and first-purchase presentation scenes.",
     tags: ["Live-Ops", "Economy", "Metagame", "Team Lead"],
   },
   {
     title: "Austin's Odyssey",
-    role: "Technical Designer",
-    studio: "Playrix — Soft Launch",
+    role: "Technical Game Designer",
+    studio: "PLAYRIX — SOFT LAUNCH",
     year: "2024",
     image: projAustin,
     description:
-      "Owned full UI layout and integration on a new Playrix title — atlas creation, asset wiring, audio and VFX setup. Shipped end-to-end on the VSO engine.",
+      "- Created GDD documentation for the technical implementation of in-game events and gameplay features.\n- Implemented UI elements in-game, working closely with animations, VFX, and haptic feedback systems.\n- Managed game resources, including importing and configuring assets according to design documentation and feature requirements.\n- Updated meta-game configurations and location content to support ongoing feature development.",
     tags: ["VSO Engine", "UI Integration", "VFX & Audio"],
   },
 ];
@@ -168,7 +168,7 @@ function ProjectRow({ project, index, flipped }: { project: Project; index: numb
             {project.title}
           </h3>
           <p className="text-[11px] font-mono uppercase tracking-[0.2em] text-ghost/40">
-            {project.studio} · {project.year}
+            {project.studio}
           </p>
         </div>
         <p className="text-ghost/70 leading-relaxed text-[15px] font-sans whitespace-pre-line">
