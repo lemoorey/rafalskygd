@@ -160,20 +160,7 @@ function ProjectRow({ project, index, flipped }: { project: Project; index: numb
   return (
     <article className="grid md:grid-cols-12 gap-8 md:gap-12 items-start">
       <div className={`md:col-span-8 ${flipped ? "md:order-2" : ""}`}>
-        <div className="group relative w-full aspect-video bg-surface outline outline-1 -outline-offset-1 outline-ghost/5 overflow-hidden">
-          <img
-            src={project.image}
-            alt={`${project.title} key art`}
-            loading="lazy"
-            width={1280}
-            height={720}
-            className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-tr from-void/60 via-transparent to-transparent" />
-          <span className="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-[0.25em] text-neon">
-            / {num}
-          </span>
-        </div>
+        <ProjectMedia project={project} num={num} />
       </div>
       <div className={`md:col-span-4 space-y-6 ${flipped ? "md:order-1" : ""}`}>
         <div className="space-y-2">
@@ -197,9 +184,46 @@ function ProjectRow({ project, index, flipped }: { project: Project; index: numb
             </span>
           ))}
         </div>
+        {project.link && (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.25em] text-neon border-b border-neon/40 pb-1 hover:border-neon transition-colors"
+          >
+            Visit store page ↗
+          </a>
+        )}
       </div>
     </article>
   );
+}
+
+function ProjectMedia({ project, num }: { project: Project; num: string }) {
+  const inner = (
+    <div className="group relative w-full aspect-video bg-surface outline outline-1 -outline-offset-1 outline-ghost/5 overflow-hidden">
+          <img
+            src={project.image}
+            alt={`${project.title} key art`}
+            loading="lazy"
+            width={1280}
+            height={720}
+            className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-tr from-void/60 via-transparent to-transparent" />
+          <span className="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-[0.25em] text-neon">
+            / {num}
+          </span>
+        </div>
+  );
+  if (project.link) {
+    return (
+      <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+        {inner}
+      </a>
+    );
+  }
+  return inner;
 }
 
 function AboutSection() {
