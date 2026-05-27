@@ -65,7 +65,7 @@ const projects: Project[] = [
     year: "2019 — Present",
     image: projFishdom,
     description:
-      "- Designed and delivered new location systems (tanks), covering full pipeline from early concept and GDD creation to implementation, tuning, and final polish in live product.\n- Designed and implemented new fish character systems (event, premium, and collectible variants), defining gameplay behaviors, progression roles, personality design, and unique mechanics.\n-Designed and balanced core in-game economy systems for new locations, including soft/hard currency loops, shop structures, decoration systems, and collectible progression.\n- Owned end-to-end LiveOps event design driven by player analytics, including event systems configuration, economy tuning, narrative-driven GDDs, and UX flow improvements aimed at increasing engagement and retention.\n- Led and coordinated a team of Content Game Designers, overseeing feature ownership, task prioritization, content quality standards, and cross-team alignment to ensure consistent delivery against product goals.",
+      "- Designed and delivered new location systems (tanks), covering full pipeline from early concept and GDD creation to implementation, tuning, and final polish in live product.\n- Designed and implemented new fish character systems (event, premium, and collectible variants), defining gameplay behaviors, progression roles, personality design, and unique mechanics.\n- Designed and balanced core in-game economy systems for new locations, including soft/hard currency loops, shop structures, decoration systems, and collectible progression.\n- Owned end-to-end LiveOps event design driven by player analytics, including event systems configuration, economy tuning, narrative-driven GDDs, and UX flow improvements aimed at increasing engagement and retention.\n- Led and coordinated a team of Content Game Designers, overseeing feature ownership, task prioritization, content quality standards, and cross-team alignment to ensure consistent delivery against product goals.",
     tags: ["Balancing", "Events", "Monetisation", "Team Lead", "Locations", "Live-Ops", "Metagame", "VSO"],
     link: "https://apps.apple.com/ua/app/fishdom/id664575829",
     slides: [
@@ -108,7 +108,7 @@ const projects: Project[] = [
   {
     title: "Dino Battle",
     role: "Game Designer",
-    studio: "",
+    studio: "Pinokl Games",
     year: "",
     image: projDino,
     description:
