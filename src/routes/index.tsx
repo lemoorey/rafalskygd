@@ -45,7 +45,7 @@ const projects: Project[] = [
     year: "2014 — 2019",
     image: projPartyHard,
     description:
-      "- Designed and implemented trap and incident mechanics, taking features from initial GDD concepts through in-game implementation, balancing, and final polishing.\n- Designed level layouts focused on interactive systems, environmental storytelling, and puzzle-driven gameplay flow to support player engagement and exploration.\n- Designed NPC and event behavior systems enabling dynamic player interactions and emergent gameplay scenarios through reactive and context-driven logic.\n- Contributed to narrative and story design for DLC content, supporting plot structure, mission progression, and integration of narrative beats into gameplay flow.\n- Designed and implemented Twitch integration systems enabling real-time viewer interaction with gameplay, allowing audience-driven events and direct influence on in-game outcomes.",
+      "• Designed and implemented trap and incident mechanics, taking features from initial GDD concepts through in-game implementation, balancing, and final polishing.\n• Designed level layouts focused on interactive systems, environmental storytelling, and puzzle-driven gameplay flow to support player engagement and exploration.\n• Designed NPC and event behavior systems enabling dynamic player interactions and emergent gameplay scenarios through reactive and context-driven logic.\n• Contributed to narrative and story design for DLC content, supporting plot structure, mission progression, and integration of narrative beats into gameplay flow.\n• Designed and implemented Twitch integration systems enabling real-time viewer interaction with gameplay, allowing audience-driven events and direct influence on in-game outcomes.",
     tags: ["Game Design", "Level Design", "Game Mechanics", "Unity", "GDD", "Narrative", "Twitch"],
     link: "https://store.steampowered.com/app/356570/Party_Hard/",
     linkLabel: "PARTY HARD ↗",
@@ -65,7 +65,7 @@ const projects: Project[] = [
     year: "2019 — Present",
     image: projFishdom,
     description:
-      "- Designed and delivered new location systems (tanks), covering full pipeline from early concept and GDD creation to implementation, tuning, and final polish in live product.\n- Designed and implemented new fish character systems (event, premium, and collectible variants), defining gameplay behaviors, progression roles, personality design, and unique mechanics.\n- Designed and balanced core in-game economy systems for new locations, including soft/hard currency loops, shop structures, decoration systems, and collectible progression.\n- Owned end-to-end LiveOps event design driven by player analytics, including event systems configuration, economy tuning, narrative-driven GDDs, and UX flow improvements aimed at increasing engagement and retention.\n- Led and coordinated a team of Content Game Designers, overseeing feature ownership, task prioritization, content quality standards, and cross-team alignment to ensure consistent delivery against product goals.",
+      "• Designed and delivered new location systems (tanks), covering full pipeline from early concept and GDD creation to implementation, tuning, and final polish in live product.\n• Designed and implemented new fish character systems (event, premium, and collectible variants), defining gameplay behaviors, progression roles, personality design, and unique mechanics.\n• Designed and balanced core in-game economy systems for new locations, including soft/hard currency loops, shop structures, decoration systems, and collectible progression.\n• Owned end-to-end LiveOps event design driven by player analytics, including event systems configuration, economy tuning, narrative-driven GDDs, and UX flow improvements aimed at increasing engagement and retention.\n• Led and coordinated a team of Content Game Designers, overseeing feature ownership, task prioritization, content quality standards, and cross-team alignment to ensure consistent delivery against product goals.",
     tags: ["Balancing", "Events", "Monetisation", "Team Lead", "Locations", "Live-Ops", "Metagame", "VSO"],
     link: "https://apps.apple.com/ua/app/fishdom/id664575829",
     slides: [
@@ -81,7 +81,7 @@ const projects: Project[] = [
     year: "2019 — Present",
     image: projAqua,
     description:
-      "- Designed and tuned fish movement systems, physics, and behavioral interactions to improve gameplay feel, responsiveness, and player immersion within core gameplay loop in brand new game.\n- Designed FTUE flows for meta-game systems, including onboarding sequences, item purchase moments, and contextual fish reactions tied to player actions to improve early engagement and system comprehension.\n- Created and maintained GDDs for new tank location systems, including progression upgrade paths, animation beats, and first-purchase presentation flows designed to drive player conversion and feature understanding.",
+      "• Designed and tuned fish movement systems, physics, and behavioral interactions to improve gameplay feel, responsiveness, and player immersion within core gameplay loop in brand new game.\n• Designed FTUE flows for meta-game systems, including onboarding sequences, item purchase moments, and contextual fish reactions tied to player actions to improve early engagement and system comprehension.\n• Created and maintained GDDs for new tank location systems, including progression upgrade paths, animation beats, and first-purchase presentation flows designed to drive player conversion and feature understanding.",
     tags: ["Metagame", "Locations", "FTUE"],
     link: "https://apps.apple.com/ua/app/aqua-match/id6502511364",
     slides: [
@@ -96,7 +96,7 @@ const projects: Project[] = [
     year: "2024",
     image: projAustin,
     description:
-      "- Designed and documented event and gameplay feature systems through GDDs, defining technical and gameplay requirements for implementation, balancing, and content integration.\n- Collaborated on in-game UI implementation, aligning design intent with animation, VFX, and haptic feedback systems to ensure cohesive player experience.\n- Managed and integrated game assets, ensuring proper configuration and alignment with design specifications, feature requirements, and production standards.\n- Maintained and updated meta-game configurations and location content to support ongoing feature development, live balancing, and iterative content improvements.",
+      "• Designed and documented event and gameplay feature systems through GDDs, defining technical and gameplay requirements for implementation, balancing, and content integration.\n• Collaborated on in-game UI implementation, aligning design intent with animation, VFX, and haptic feedback systems to ensure cohesive player experience.\n• Managed and integrated game assets, ensuring proper configuration and alignment with design specifications, feature requirements, and production standards.\n• Maintained and updated meta-game configurations and location content to support ongoing feature development, live balancing, and iterative content improvements.",
     tags: ["Event Logic", "Metagame", "VFX", "Animation", "GDD", "VSO", "UI/UX"],
     link: "https://apps.apple.com/us/app/austins-odyssey/id6740872037",
     slides: [
@@ -112,7 +112,7 @@ const projects: Project[] = [
     year: "",
     image: projDino,
     description:
-      "- Designed and documented event and gameplay feature systems through GDDs, defining technical and gameplay requirements for implementation, balancing, and content integration.\n- Collaborated on in-game UI implementation, aligning design intent with animation, VFX, and haptic feedback systems to ensure cohesive player experience.\n- Managed and integrated game assets, ensuring proper configuration and alignment with design specifications, feature requirements, and production standards.\n- Maintained and updated meta-game configurations and location content to support ongoing feature development, live balancing, and iterative content improvements.",
+      "• Designed and documented event and gameplay feature systems through GDDs, defining technical and gameplay requirements for implementation, balancing, and content integration.\n• Collaborated on in-game UI implementation, aligning design intent with animation, VFX, and haptic feedback systems to ensure cohesive player experience.\n• Managed and integrated game assets, ensuring proper configuration and alignment with design specifications, feature requirements, and production standards.\n• Maintained and updated meta-game configurations and location content to support ongoing feature development, live balancing, and iterative content improvements.",
     tags: ["Combat System", "Balancing", "Economy", "Narrative", "GDD"],
     link2: { label: "Gameplay example ↗", href: "https://youtu.be/npMlNVcuaU0?si=Vkt_kr3u7lnGZmX4&t=22" },
   },
