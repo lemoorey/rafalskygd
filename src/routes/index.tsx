@@ -108,7 +108,7 @@ const projects: Project[] = [
   {
     title: "Dino Battle",
     role: "Game Designer",
-    studio: "",
+    studio: "Pinokl Games",
     year: "",
     image: projDino,
     description:
